@@ -1,92 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
 
-    <!--I was getting a reference error saying that $ was undefined. I googled it and it said to have my resource to jquery in
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Work Day Scheduler</title>
+
+  <!--I was getting a reference error saying that $ was undefined. I googled it and it said to have my resource to jquery in
     the head so I moved it and that got rid of the error.-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
-  </head>
+</head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-        <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container time-block">
-      <div class ="row">
-          <time class ="col-md hour">9 am</time>
-          <textarea id = "textarea description" class ="col-md-10" ></textarea>
-          <button class = "saveBtn col-md"><i class="far fa-save"></i></button>
-     </div>
-
-      <div class ="row">
-        <time class ="col-md hour">10 am</time>
-        <textarea id = "textarea description" class ="col-md-10"></textarea>
-        <button class = "saveBtn col-md"><i class="far fa-save"></i></button>
-      </div>
-      <div class ="row"> 
-        <time class ="col-md hour"> 11 am</time>
-        <textarea id = "textarea description" class ="col-md-10"></textarea>
-        <button class = "saveBtn col-md"><i class="far fa-save"></i></button>
-      </div>
-      <div class ="row">
-        <time class ="col-md hour">12 pm</time>
-        <textarea id ="textarea description" class ="col-md-10"></textarea>
-        <button class = "saveBtn col-md"><i class="far fa-save"></i></button>
-      </div>
-      <div class ="row">  
-        <time class ="col-md hour">1 pm</time>
-        <textarea id = "textarea description" class ="col-md-10"></textarea>
-        <button class = "saveBtn col-md"><i class="far fa-save"></i></button>
-      </div>
-      <div class ="row">  
-        <time class ="col-md hour"> 2 pm</time>
-        <textarea id = "textarea description" class ="col-md-10"></textarea>
-        <button class = "saveBtn col-md"><i class="far fa-save"></i></button>
-      </div>
-      <div class ="row">
-        <time class ="col-md hour">3 pm</time>
-        <textarea id = "textarea description" class ="col-md-10"></textarea>
-        <button class = "saveBtn col-md"><i class="far fa-save"></i></button>
-      </div>
-      <div class ="row">
-        <time class ="col-md hour"> 4 pm</time>
-        <textarea id = "textarea description"class ="col-md-10"></textarea>
-        <button class ="saveBtn col-md"><i class="far fa-save"></i></button>
-      </div>
-      <div class ="row"> 
-        <time class ="col-md hour">5 pm</time>
-        <textarea id ="textarea description"class ="col-md-10"></textarea>
-        <button class ="saveBtn col-md"><i class="far fa-save"></i></button>
-      </div>           
-
-      </div>
-
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+  <div class="container">
+    <div class="row  time-block">
+      <time class="col-md hour" id="9">0900</time>
+      <textarea id="textarea description" class="col-md-10"></textarea>
+      <button class="saveBtn col-md"><i class="far fa-save"></i></button>
     </div>
 
-    <script src ="script.js"></script>
-    
-  </body>
+    <div class="row  time-block">
+      <time class="col-md hour" id="10">1000</time>
+      <textarea id="textarea description" class="col-md-10"></textarea>
+      <button class="saveBtn col-md"><i class="far fa-save"></i></button>
+    </div>
+    <div class="row  time-block">
+      <time class="col-md hour" id="11"> 1100</time>
+      <textarea id="textarea description" class="col-md-10"></textarea>
+      <button class="saveBtn col-md"><i class="far fa-save"></i></button>
+    </div>
+    <div class="row time-block">
+      <time class="col-md hour" id="12">1200</time>
+      <textarea id="textarea description" class="col-md-10"></textarea>
+      <button class="saveBtn col-md"><i class="far fa-save"></i></button>
+    </div>
+    <div class="row  time-block">
+      <time class="col-md hour" id="13">1300</time>
+      <textarea id="textarea description" class="col-md-10"></textarea>
+      <button class="saveBtn col-md"><i class="far fa-save"></i></button>
+    </div>
+    <div class="row  time-block">
+      <time class="col-md hour" id="14"> 1400</time>
+      <textarea id="textarea description" class="col-md-10"></textarea>
+      <button class="saveBtn col-md"><i class="far fa-save"></i></button>
+    </div>
+    <div class="row time-block">
+      <time class="col-md hour" id="15">1500</time>
+      <textarea id="textarea description" class="col-md-10"></textarea>
+      <button class="saveBtn col-md"><i class="far fa-save"></i></button>
+    </div>
+    <div class="row time-block">
+      <time class="col-md hour" id="16"> 1600</time>
+      <textarea id="textarea description" class="col-md-10"></textarea>
+      <button class="saveBtn col-md"><i class="far fa-save"></i></button>
+    </div>
+    <div class="row  time-block">
+      <time class="col-md hour" id="17">1700</time>
+      <textarea id="textarea description" class="col-md-10"></textarea>
+      <button class="saveBtn col-md"><i class="far fa-save"></i></button>
+    </div>
+
+  </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
 </html>
