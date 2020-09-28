@@ -3,24 +3,19 @@ $(document).ready(function () {
     // display the date in the header using the id and copied the format directly from moment.js
     $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
-    var saveBtnEl = $(".saveBtn");
-
     function timeTracker() {
         // element to hold the current hour
         var currHour = moment().hour();
         console.log(currHour);
 
         //create a loop to check each time block 
-        $(".hour").each(function () {
+        $(".time-block").each(function () {
             //element for each time block 
             var timeBlock = parseInt($(this).attr("id"));
             console.log(timeBlock);
 
             // create if/else statement to check whether it is past, present, or future.
             // could only get my if statement to work by changing it to military time
-
-            //currently the background color of my time is what is updating, how do I get the text area to update?
-
             if (timeBlock < currHour) {
                 $(this).addClass("past");
             }
@@ -32,7 +27,19 @@ $(document).ready(function () {
             }
         });
     };
-    
+
     timeTracker();
 });
+
+$(".saveBtn").on("click", function(){
+    // need to store time and text being input by user .. not sure how
+    console.log(this); // this is the button being clicked, trying to use "this" to get to my other elements, how?
+    var time = $(this).parent().attr("id"); // to get the time using the id of the row (the parent)
+    var text = $(this).siblings(".description").val(); // to get the value of the text area using the description id as selector
+    console.log(time);
+    console.log(text);
+    // set values in local storage
+    localStorage.setItem(time,text);
+});
+
 
