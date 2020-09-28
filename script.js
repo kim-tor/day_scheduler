@@ -32,14 +32,18 @@ $(document).ready(function () {
 });
 
 $(".saveBtn").on("click", function(){
-    // need to store time and text being input by user .. not sure how
-    console.log(this); // this is the button being clicked, trying to use "this" to get to my other elements, how?
+    // console.log(this); // "this" is the button being clicked
     var time = $(this).parent().attr("id"); // to get the time using the id of the row (the parent)
-    var text = $(this).siblings(".description").val(); // to get the value of the text area using the description id as selector
-    console.log(time);
-    console.log(text);
+    var text = $(this).siblings(".description").val(); // to get the value of the text area using the description id as selector, text area is a sibling of button
+    // console.log(time);
+    // console.log(text);
     // set values in local storage
     localStorage.setItem(time,text);
+    
 });
+
+//saving inputs on to page so that they don't get wiped when refreshed *this is where I need help*
+// $("#14").localStorage.getItem("14");
+// console.log($("#14").localStorage.getItem("14"))
 
 
