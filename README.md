@@ -1,6 +1,6 @@
 # day_scheduler
 
-[Day Scheduler]()
+[Day Scheduler](https://kim-tor.github.io/day_scheduler/)
 ==================
 ![Image of Scheduler](work_day_schedule.png)
 
@@ -16,6 +16,8 @@ Upon clicking the save button(which has an icon that I used from Font Awesome), 
 
 
 # Credits
+I attened office hours as well to get some help with the local storage I worked with my instructor and TA.
+
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 https://api.jquery.com/each/
 https://fontawesome.com/icons/save?style=regular
